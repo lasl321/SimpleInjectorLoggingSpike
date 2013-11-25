@@ -10,9 +10,15 @@ namespace SimpleInjectorLoggingSpike
     {
         static void Main(string[] args)
         {
-            var instance = Global.Container.GetInstance<IMyInterface>();
+            log4net.Config.XmlConfigurator.Configure();
 
+            var instance = Global.Container.GetInstance<IMyInterface>();
+          
             Console.WriteLine("Got instance");
+
+            var instance2 = Global.Container.GetInstance<IMyInterface>();
+
+            Console.WriteLine("Got another instance");
         }
     }
 }

@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using log4net;
 
 namespace SimpleInjectorLoggingSpike
 {
     class MyConcreteClass : IMyInterface
     {
-        private ILog<MyConcreteClass> _log;
+        private log4net.ILog _log;
 
-        public MyConcreteClass(ILog<MyConcreteClass> log)
+        public MyConcreteClass(log4net.ILog log)
         {
             _log = log;
 

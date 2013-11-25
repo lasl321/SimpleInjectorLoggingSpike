@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace SimpleInjectorLoggingSpike
 {
-    interface ILog<T>
+    interface ILog
     {
         void Debug(string format, params object[] args);
     }
 
-    class Log<T> : ILog<T>
+    class Log<T> : ILog
     {
         public void Debug(string format, params object[] args)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(format, args);
         }
     }
 }

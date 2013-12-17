@@ -17,8 +17,10 @@ namespace SimpleInjectorLoggingSpike
             Console.WriteLine("Got instance");
 
             var instance2 = Global.Container.GetInstance<IMyInterface>();
-
+            
             Console.WriteLine("Got another instance");
+
+            Console.WriteLine(Global.Loggers.Count);
         }
     }
 }

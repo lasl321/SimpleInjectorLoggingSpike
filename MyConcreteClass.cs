@@ -14,7 +14,7 @@ namespace SimpleInjectorLoggingSpike
         {
             _log = log;
 
-            _log.Debug("This is a message from MyConcreteClass");
+            _log.Debug("This is a message from MyConcreteClass" + " xyz123" + " " + _log.GetHashCode());
         }
     }
 }
